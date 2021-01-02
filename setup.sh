@@ -139,7 +139,7 @@ apps=(
 # Install apps to /Applications
 # Default is: /Users/$user/Applications
 echo "Installing apps with Cask..."
-brew install --appdir="/Applications" ${apps[@]}
+brew install --cask --appdir="/Applications" ${apps[@]}
 
 echo "Git config"
 git config --global user.name "Alessandro Braidotti"
@@ -152,6 +152,5 @@ chmod 755 /usr/local/share/zsh/site-functions
 # Install oh-my-zsh
 echo "Installing oh-my-zsh..."
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-echo "Need to logout now to start the new SHELL..."
-logout
+exit
 
