@@ -105,25 +105,8 @@ brew update
 echo "Upgrading Homebrew..."
 brew upgrade
 
-# Install iTerm2
-echo "Installing iTerm2..."
-brew cask install iterm2
-
-# Update the Terminal
-# Install oh-my-zsh
-echo "Installing oh-my-zsh..."
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-echo "Need to logout now to start the new SHELL..."
-logout
-
-echo "Installing Git..."
-brew install git
-
-echo "Git config"
-git config --global user.name "Alessandro Braidotti"
-git config --global user.email alessandro@kintyre.co
-
 brew install awscli
+brew install git
 brew install nmap
 brew install node
 brew install python3
@@ -132,6 +115,7 @@ brew install trash
 brew install tree
 brew install wget
 brew install yarn
+brew install zsh
 
 # Apps
 apps=(
@@ -142,6 +126,7 @@ apps=(
     forticlient
     google-chrome
     google-drive-file-stream
+    iterm2
     lastpass
     openvpn-connect
     postman
@@ -156,7 +141,16 @@ apps=(
 echo "Installing apps with Cask..."
 brew cask install --appdir="/Applications" ${apps[@]}
 
-# Remove outdated versions from the cellar.
-echo "Running brew cleanup..."
-brew cleanup
-echo "You're done!"
+echo "Git config"
+git config --global user.name "Alessandro Braidotti"
+git config --global user.email alessandro@kintyre.co
+
+# Update the Terminal
+# Install oh-my-zsh
+echo "Installing oh-my-zsh..."
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+echo "Need to logout now to start the new SHELL..."
+logout
+
+chmod 755 /usr/local/share/zsh
+chmod 755 /usr/local/share/zsh/site-functions
