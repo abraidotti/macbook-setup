@@ -145,6 +145,9 @@ echo "Git config"
 git config --global user.name "Alessandro Braidotti"
 git config --global user.email alessandro@kintyre.co
 
+chmod 755 /usr/local/share/zsh
+chmod 755 /usr/local/share/zsh/site-functions
+
 # Update the Terminal
 # Install oh-my-zsh
 echo "Installing oh-my-zsh..."
@@ -152,5 +155,3 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 echo "Need to logout now to start the new SHELL..."
 logout
 
-chmod 755 /usr/local/share/zsh
-chmod 755 /usr/local/share/zsh/site-functions
