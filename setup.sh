@@ -139,7 +139,7 @@ apps=(
 # Install apps to /Applications
 # Default is: /Users/$user/Applications
 echo "Installing apps with Cask..."
-brew cask install --appdir="/Applications" ${apps[@]}
+brew install --appdir="/Applications" ${apps[@]}
 
 echo "Git config"
 git config --global user.name "Alessandro Braidotti"
