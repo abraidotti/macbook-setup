@@ -122,8 +122,8 @@ CLIApps=(
 
 # Install apps to /Applications
 # Default is: /Users/$user/Applications
-echo "Installing apps with Cask..."
-brew install --appdir="/Applications" --cask ${GUIapps[@]}
+echo "Installing CLI apps..."
+brew install  ${GUIapps[@]}
 
 CaskApps=(
     adobe-acrobat-reader
@@ -146,7 +146,7 @@ CaskApps=(
 # Install apps to /Applications
 # Default is: /Users/$user/Applications
 echo "Installing apps with Cask..."
-brew install --appdir="/Applications" --cask ${CaskApps[@]}
+brew install --cask ${CaskApps[@]}
 
 echo "Git config"
 git config --global user.name "Alessandro Braidotti"
