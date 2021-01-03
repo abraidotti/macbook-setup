@@ -105,20 +105,27 @@ brew update
 echo "Upgrading Homebrew..."
 brew upgrade
 
-brew install awscli
-brew install git
-brew install nmap
-brew install node
-brew install python3
-brew install terraform
-brew install trash
-brew install tree
-brew install wget
-brew install yarn
-brew install zsh
+# CLI apps
+CLIApps=(
+    awscli
+    git
+    nmap
+    node
+    python3
+    terraform
+    trash
+    tree
+    wget
+    yarn
+    zsh
+)
 
-# Apps
-apps=(
+# Install apps to /Applications
+# Default is: /Users/$user/Applications
+echo "Installing apps with Cask..."
+brew install --appdir="/Applications" --cask ${GUIapps[@]}
+
+CaskApps=(
     adobe-acrobat-reader
     burp-suite
     docker
@@ -139,7 +146,7 @@ apps=(
 # Install apps to /Applications
 # Default is: /Users/$user/Applications
 echo "Installing apps with Cask..."
-brew install --cask --appdir="/Applications" ${apps[@]}
+brew install --appdir="/Applications" --cask ${CaskApps[@]}
 
 echo "Git config"
 git config --global user.name "Alessandro Braidotti"
