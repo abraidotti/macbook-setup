@@ -105,7 +105,6 @@ brew update
 echo "Upgrading Homebrew..."
 brew upgrade
 
-# CLI apps
 CLIApps=(
     awscli
     git
@@ -120,10 +119,8 @@ CLIApps=(
     zsh
 )
 
-# Install apps to /Applications
-# Default is: /Users/$user/Applications
 echo "Installing CLI apps..."
-brew install  ${GUIapps[@]}
+brew install ${CLIapps[@]}
 
 CaskApps=(
     adobe-acrobat-reader
@@ -143,8 +140,6 @@ CaskApps=(
     zoom
 )
 
-# Install apps to /Applications
-# Default is: /Users/$user/Applications
 echo "Installing apps with Cask..."
 brew install --cask ${CaskApps[@]}
 
