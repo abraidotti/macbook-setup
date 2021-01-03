@@ -105,22 +105,17 @@ brew update
 echo "Upgrading Homebrew..."
 brew upgrade
 
-CLIApps=(
-    awscli
-    git
-    nmap
-    node
-    python3
-    terraform
-    trash
-    tree
-    wget
-    yarn
-    zsh
-)
-
-echo "Installing CLI apps..."
-brew install ${CLIapps[@]}
+brew install awscli
+brew install git
+brew install nmap
+brew install node
+brew install python3
+brew install terraform
+brew install trash
+brew install tree
+brew install wget
+brew install yarn
+brew install zsh
 
 CaskApps=(
     adobe-acrobat-reader
