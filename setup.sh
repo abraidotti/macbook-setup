@@ -106,6 +106,7 @@ echo "Upgrading Homebrew..."
 brew upgrade
 
 brew install awscli
+brew install coreutils
 brew install git
 brew install nmap
 brew install node
