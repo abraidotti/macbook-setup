@@ -8,6 +8,8 @@ sandro's macbook setup script for kintyre
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/abraidotti/macbook-setup/master/setup.sh)"
 ```
 
+Reboot your computer after running.
+
 ## thank you
 
 Mike Privette. Check out his script: <https://dev.to/mikeprivette/yanmss-yet-another-new-mac-setup-script-30b7>

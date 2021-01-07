@@ -45,8 +45,8 @@ defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 defaults write -g com.apple.swipescrolldirection '0'
 
 # Set trackpad & mouse speed
-defaults write -g com.apple.trackpad.scaling 2
-defaults write -g com.apple.mouse.scaling 2.5
+defaults write -g com.apple.trackpad.scaling 1.5
+defaults write -g com.apple.mouse.scaling 1.5
 
 # Set dock items to 36 px
 defaults write com.apple.dock tilesize -int 36
@@ -152,3 +152,4 @@ echo "Installing oh-my-zsh..."
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 exit
 
+echo "Don't forget to reboot your computer to enact environment changes."
